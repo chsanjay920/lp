@@ -1,0 +1,10 @@
+echo "Enter a number"
+read number
+rev=0
+while [ $number -gt 0 ]
+do
+	mod=$(($number%10))
+	rev=$(($(($rev*10))+$mod))
+	number=$(($number/2))
+done
+echo $rev
